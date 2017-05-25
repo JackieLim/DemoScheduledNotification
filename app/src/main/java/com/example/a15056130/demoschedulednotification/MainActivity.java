@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Calendar cal = Calendar.getInstance();
-                cal.add(Calendar.SECOND,5);
+                cal.add(Calendar.MINUTE,1);
+                cal.add(Calendar.SECOND,30);
 
                 Intent intent = new Intent(MainActivity.this, ScheduledNotificationReceiver.class);
                 PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, reqCode, intent, PendingIntent.FLAG_CANCEL_CURRENT);
